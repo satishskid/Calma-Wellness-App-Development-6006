@@ -4,12 +4,13 @@ import { motion } from 'framer-motion';
 import SafeIcon from '../../common/SafeIcon';
 import * as FiIcons from 'react-icons/fi';
 
-const { FiHome, FiHeart, FiEdit3, FiWind, FiMapPin } = FiIcons;
+const { FiHome, FiHeart, FiEdit3, FiWind, FiMapPin, FiTarget } = FiIcons;
 
 const Navigation = () => {
   const navItems = [
     { path: '/', icon: FiHome, label: 'Home' },
     { path: '/meditation', icon: FiHeart, label: 'Meditate' },
+    { path: '/relaxation', icon: FiTarget, label: 'Relax' },
     { path: '/journal', icon: FiEdit3, label: 'Journal' },
     { path: '/breathwork', icon: FiWind, label: 'Breathe' },
     { path: '/walk', icon: FiMapPin, label: 'Walk' },
@@ -38,9 +39,15 @@ const Navigation = () => {
               >
                 <SafeIcon
                   icon={item.icon}
-                  className={`w-6 h-6 ${isActive ? 'text-indigo-600' : 'text-gray-500'}`}
+                  className={`w-6 h-6 ${
+                    isActive ? 'text-indigo-600' : 'text-gray-500'
+                  }`}
                 />
-                <span className={`text-xs ${isActive ? 'text-indigo-600' : 'text-gray-500'}`}>
+                <span
+                  className={`text-xs ${
+                    isActive ? 'text-indigo-600' : 'text-gray-500'
+                  }`}
+                >
                   {item.label}
                 </span>
               </motion.div>

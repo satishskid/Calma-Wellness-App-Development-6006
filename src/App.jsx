@@ -9,6 +9,7 @@ import Journal from './pages/Journal/Journal';
 import Breathwork from './pages/Breathwork/Breathwork';
 import Walk from './pages/Walk/Walk';
 import Profile from './pages/Profile/Profile';
+import RelaxationTechniques from './pages/RelaxationTechniques/RelaxationTechniques';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/meditation" element={<Meditation />} />
+            <Route path="/relaxation" element={<RelaxationTechniques />} />
             <Route path="/journal" element={<Journal />} />
             <Route path="/breathwork" element={<Breathwork />} />
             <Route path="/walk" element={<Walk />} />
